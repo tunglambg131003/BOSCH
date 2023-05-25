@@ -59,7 +59,7 @@ def boschcoderace_update_user_login(userName,hashedPassword):
     return True
 
 def boschcoderace_store_password(username,Password):
-    hasher = hashlib.new('md5')
+    hasher = hashlib.new('sha256')
     hasher.update(Password)
     hashedPassword = hasher.digest()
     # UpdateUserLogin returns True on success, False otherwise
